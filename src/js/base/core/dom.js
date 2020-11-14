@@ -1122,7 +1122,7 @@ export default {
   /** @property {String} blank */
   blank: blankHTML,
   /** @property {String} emptyPara */
-  emptyPara: `<p>${blankHTML}</p>`,
+  emptyPara: `<div>${blankHTML}</div>`,
   makePredByNodeName,
   isEditable,
   isControlSizing,
