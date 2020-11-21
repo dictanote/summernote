@@ -13,9 +13,9 @@ import lists from './core/lists';
 import Editor from './module/Editor';
 import Clipboard from './module/Clipboard';
 import Dropzone from './module/Dropzone';
-import Codeview from './module/Codeview';
-import Statusbar from './module/Statusbar';
-import Fullscreen from './module/Fullscreen';
+// import Codeview from './module/Codeview';
+// import Statusbar from './module/Statusbar';
+// import Fullscreen from './module/Fullscreen';
 import Handle from './module/Handle';
 import AutoLink from './module/AutoLink';
 import AutoSync from './module/AutoSync';
@@ -29,8 +29,8 @@ import ImageDialog from './module/ImageDialog';
 import ImagePopover from './module/ImagePopover';
 import TablePopover from './module/TablePopover';
 import VideoDialog from './module/VideoDialog';
-import HelpDialog from './module/HelpDialog';
-import AirPopover from './module/AirPopover';
+// import HelpDialog from './module/HelpDialog';
+// import AirPopover from './module/AirPopover';
 import HintPopover from './module/HintPopover';
 
 $.summernote = $.extend($.summernote, {
