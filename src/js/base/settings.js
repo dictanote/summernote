@@ -1,5 +1,11 @@
 import $ from 'jquery';
 import './summernote-en-US';
+import '../../../lang/summernote-it-IT.js';
+import '../../../lang/summernote-ja-JP.js';
+import '../../../lang/summernote-pt-BR.js';
+import '../../../lang/summernote-hu-HU.js';
+import '../../../lang/summernote-fr-FR.js';
+import '../../../lang/summernote-de-DE.js';
 import '../summernote';
 import dom from './core/dom';
 import range from './core/range';
@@ -42,9 +48,9 @@ $.summernote = $.extend($.summernote, {
       'editor': Editor,
       'clipboard': Clipboard,
       'dropzone': Dropzone,
-      'codeview': Codeview,
-      'statusbar': Statusbar,
-      'fullscreen': Fullscreen,
+      // 'codeview': Codeview,
+      // 'statusbar': Statusbar,
+      // 'fullscreen': Fullscreen,
       'handle': Handle,
       // FIXME: HintPopover must be front of autolink
       //  - Script error about range when Enter key is pressed on hint popover
@@ -61,8 +67,8 @@ $.summernote = $.extend($.summernote, {
       'imagePopover': ImagePopover,
       'tablePopover': TablePopover,
       'videoDialog': VideoDialog,
-      'helpDialog': HelpDialog,
-      'airPopover': AirPopover,
+      // 'helpDialog': HelpDialog,
+      // 'airPopover': AirPopover,
     },
 
     buttons: {},

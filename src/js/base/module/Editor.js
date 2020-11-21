@@ -121,7 +121,7 @@ export default class Editor {
       if (this.isLimited($(node).text().length)) {
         return;
       }
-      const rng = this.getLastRange();
+      const rng = this.getLastRange(true);
       rng.insertNode(node);
       this.setLastRange(range.createFromNodeAfter(node).select());
     });
@@ -546,8 +546,8 @@ export default class Editor {
    *
    * @return {WrappedRange}
    */
-  getLastRange() {
-    if (!this.lastRange) {
+  getLastRange(fresh) {
+    if (fresh || !this.lastRange) {
       this.setLastRange();
     }
     return this.lastRange;
