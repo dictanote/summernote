@@ -600,6 +600,17 @@ export default class Editor {
     let rng = range.create();
     if (rng) {
       rng = rng.normalize();
+      var myNodes = this.editable.childNodes;
+      for(var f=0;f<myNodes.length;f++){
+        myNodes[f].style.fontFamily = this.style.current(rng)['font-family'];
+        var myChildren = myNodes[f].childNodes;
+
+        for(var g=0;g<myChildren.length;g++){
+          if(myChildren[g].nodeType!=3){
+            myChildren[g].style.fontFamily = this.style.current(rng)['font-family'];
+          }
+        }
+      }
     }
     return rng ? this.style.current(rng) : this.style.fromNode(this.$editable);
   }
