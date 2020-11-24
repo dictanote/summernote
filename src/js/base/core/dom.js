@@ -614,7 +614,15 @@ function nextPointWithEmptyNode(point, isSkipInnerOffset) {
 
   // if node is empty string node, return current node's sibling.
   if (isEmpty(point.node)) {
-    node = point.node.nextSibling;
+    if(point.node != null){
+      node = point.node.nextSibling;
+    }
+    else{
+      node = null;
+    }
+    if(node == null && point.node!=null){
+      node = point.node.parentNode.nextSibling;
+    }
     offset = 0;
 
     return {
@@ -640,16 +648,16 @@ function nextPointWithEmptyNode(point, isSkipInnerOffset) {
   } else if (hasChildren(point.node)) {
     node = point.node.childNodes[point.offset];
     offset = 0;
-    if (isEmpty(node)) {
-      return null;
-    }
+    // if (isEmpty(node)) {
+    //   return null;
+    // }
   } else {
     node = point.node;
     offset = isSkipInnerOffset ? nodeLength(point.node) : point.offset + 1;
 
-    if (isEmpty(node)) {
-      return null;
-    }
+    // if (isEmpty(node)) {
+    //   return null;
+    // }
   }
 
   return {
