@@ -12,7 +12,7 @@ import range from './core/range';
 import lists from './core/lists';
 import Editor from './module/Editor';
 import Clipboard from './module/Clipboard';
-import Dropzone from './module/Dropzone';
+// import Dropzone from './module/Dropzone';
 // import Codeview from './module/Codeview';
 // import Statusbar from './module/Statusbar';
 // import Fullscreen from './module/Fullscreen';
@@ -47,7 +47,7 @@ $.summernote = $.extend($.summernote, {
     modules: {
       'editor': Editor,
       'clipboard': Clipboard,
-      'dropzone': Dropzone,
+      // 'dropzone': Dropzone,
       // 'codeview': Codeview,
       // 'statusbar': Statusbar,
       // 'fullscreen': Fullscreen,
